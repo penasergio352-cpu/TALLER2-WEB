@@ -5,6 +5,8 @@
 	--verde: #ff2b2b;
 	--gris: #ff5555;
 	--borde: #5c1111;
+	--fuente-texto: Georgia, 'Times New Roman', serif;
+	--fuente-interfaz: 'Trebuchet MS', Arial, sans-serif;
 }
 
 * {
@@ -14,8 +16,19 @@
 body {
 	background: var(--fondo);
 	color: var(--texto);
-	font-family: Arial, sans-serif;
+	font-family: var(--fuente-texto);
 	margin: 0;
+}
+
+.site-header a,
+.main-nav a,
+.titulo-seccion,
+.etiqueta,
+button,
+label,
+select,
+input {
+	font-family: var(--fuente-interfaz);
 }
 
 a {
@@ -24,7 +37,7 @@ a {
 }
 
 /* Encabezado */
-header {
+.site-header {
 	align-items: center;
 	border-bottom: 1px solid var(--borde);
 	display: flex;
@@ -46,17 +59,18 @@ em {
 	font-style: normal;
 }
 
-nav {
+.main-nav {
 	display: flex;
 	gap: 28px;
 }
 
-nav a {
+.main-nav a {
 	color: var(--gris);
 	font-size: 0.9rem;
 }
 
-nav a:hover {
+.main-nav a:hover,
+.main-nav a:focus {
 	color: var(--rosa);
 }
 
@@ -82,8 +96,8 @@ main {
 }
 
 .intro h1 {
-	font-size: clamp(2.8rem, 6vw, 5.5rem);
-	letter-spacing: -0.07em;
+	font-size: clamp(2.6rem, 6vw, 5.5rem);
+	letter-spacing: 0;
 	line-height: 0.95;
 	margin: 24px 0;
 }
@@ -97,7 +111,7 @@ main {
 .foto {
 	background:
 		linear-gradient(#0002, #0005),
-		url("asset/imagen/niki.jpg")
+		url("../EJECICIOS/asset/imagen/niki.jpg")
 		center / cover;
 	height: 390px;
 }
@@ -186,8 +200,8 @@ section {
 }
 
 .titulo-seccion h2 {
-	font-size: 2rem;
-	letter-spacing: -0.05em;
+	font-size: clamp(1.6rem, 4vw, 2rem);
+	letter-spacing: 0;
 	margin-bottom: 12px;
 }
 
@@ -231,8 +245,14 @@ section {
 	margin: 0;
 }
 
-.artistas strong {
+.song-link {
+	color: var(--rosa);
 	font-size: 1.3rem;
+}
+
+.song-link:hover,
+.song-link:focus {
+	color: var(--gris);
 }
 
 /* Agenda */
@@ -308,16 +328,24 @@ footer small {
 
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 650px) {
-	header {
+	.site-header {
+		align-items: flex-start;
+		gap: 1rem;
 		padding: 18px 5%;
 	}
 
-	nav {
-		gap: 12px;
+	.main-nav {
+		align-items: flex-end;
+		flex-wrap: wrap;
+		gap: 8px 12px;
 	}
 
-	nav a {
+	.main-nav a {
 		font-size: 0.75rem;
+	}
+
+	.main-nav .contrast {
+		padding: 0.35rem 0.55rem;
 	}
 
 	main {
@@ -327,6 +355,10 @@ footer small {
 	.intro {
 		display: block;
 		padding-top: 55px;
+	}
+
+	.intro h1 {
+		line-height: 1;
 	}
 
 	.foto {
@@ -351,6 +383,15 @@ footer small {
 
 	.etapas {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.titulo-seccion {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.titulo-seccion span {
+		margin-bottom: 8px;
 	}
 
 	.biografia {

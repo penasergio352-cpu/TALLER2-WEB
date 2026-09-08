@@ -17,8 +17,8 @@
 			</a>
 			<ul>
 				<li><a href="#galeria">Galería</a></li>
-				<li><a href="#sobre-mi">Sobre mí</a></li>
-				<li><a class="contrast" href="#contacto">Contactar</a></li>
+				<li><a href="#proceso">Sobre mí</a></li>
+				<li><a href="#contacto">Contactar</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -30,7 +30,7 @@
 				<h1 id="titulo-principal">Historias que caben en un instante.</h1>
 				<p class="hero-text">Observo la luz, espero el momento y lo convierto en una imagen que puedas volver a sentir.</p>
 				<div class="hero-actions">
-					<a href="#galeria" role="button">Ver colección</a>
+					<a class="primary" href="#galeria" role="button">Ver colección</a>
 					<a href="#sobre-mi" role="button" class="secondary">Conocer el proyecto</a>
 				</div>
 			</div>
@@ -61,11 +61,11 @@
 						<figcaption><strong>Pequeños vuelos</strong><span>Vida silvestre</span></figcaption>
 					</figure>
 				</article>
-				<article class="gallery-note">
+				<article id="proceso" class="gallery-note">
 					<p class="eyebrow">Mi proceso</p>
 					<h3>Encontrar belleza donde otros pasan de largo.</h3>
 					<p>Cada fotografía nace de caminar sin prisa y prestar atención a los detalles: una textura, una sombra o un cambio de color.</p>
-					<a href="#contacto">Hablemos de tu idea <span aria-hidden="true">→</span></a>
+					<a class="contrast" href="#contacto">Hablemos de tu idea <span aria-hidden="true">→</span></a>
 				</article>
 			</div>
 		</section>
@@ -81,11 +81,21 @@
 		</section>
 
 		<section id="contacto" class="contact-section container" aria-labelledby="titulo-contacto">
-			<div>
+			<div class="contact-copy">
 				<p class="eyebrow">¿Tienes una historia?</p>
 				<h2 id="titulo-contacto">Hagámosla visible.</h2>
+				<a class="contrast" href="#formulario-contacto" role="button">Escríbeme</a>
 			</div>
-			<a href="mailto:hola@luzdeobturador.com" role="button">Escríbeme</a>
+			<form id="formulario-contacto">
+				<label for="nombre">Nombre</label>
+				<input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required>
+				<label for="correo">Correo electrónico</label>
+				<input id="correo" name="correo" type="email" placeholder="tu-correo@ejemplo.com" required>
+				<label for="mensaje">Mensaje</label>
+				<textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame tu idea fotográfica" required></textarea>
+				<button type="submit">Enviar mensaje</button>
+				<p id="confirmacion-contacto" role="status" hidden>Gracias. Tu mensaje ha sido recibido.</p>
+			</form>
 		</section>
 	</main>
 
@@ -95,5 +105,12 @@
 			<p><small>© 2026 Portafolio fotográfico</small></p>
 		</div>
 	</footer>
+	<script>
+		document.querySelector('#formulario-contacto').addEventListener('submit', function (event) {
+			event.preventDefault();
+			document.querySelector('#confirmacion-contacto').hidden = false;
+			this.reset();
+		});
+	</script>
 </body>
 </html>
