@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portafolio fotográfico de Apasionados a la Fotografía, una colección de momentos naturales y urbanos.">
+	<title>Apasionados a la Fotografía | Portafolios</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<link rel="stylesheet" href="styles%20.css">
+</head>
+<body>
+	<header class="site-header">
+		<nav class="container" aria-label="Navegación principal">
+			<a class="brand" href="#inicio" aria-label="Apasionados a la Fotografía, inicio">
+				<span class="brand-mark" aria-hidden="true">◉</span>
+				<span>Apasionados a la Fotografía</span>
+			</a>
+			<ul>
+				<li><a href="#galeria">Galería</a></li>
+				<li><a href="#sobre-mi">Sobre mí</a></li>
+				<li><a class="contrast" href="#contacto">Contactar</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="inicio">
+		<section class="hero container" aria-labelledby="titulo-principal">
+			<div class="hero-copy">
+				<p class="eyebrow">Fotografía · Naturaleza · Ciudad</p>
+				<h1 id="titulo-principal">Historias que caben en un instante.</h1>
+				<p class="hero-text">Observo la luz, espero el momento y lo convierto en una imagen que puedas volver a sentir.</p>
+				<div class="hero-actions">
+					<a href="#galeria" role="button">Ver colección</a>
+					<a href="#sobre-mi" role="button" class="secondary">Conocer el proyecto</a>
+				</div>
+			</div>
+			<figure class="hero-image">
+				<img src="../asset/imagen/1.jpg" alt="Paisaje fotografiado durante una tarde luminosa" loading="eager">
+				<figcaption>Una mirada pausada sobre lo cotidiano.</figcaption>
+			</figure>
+		</section>
+
+		<section id="galeria" class="gallery-section container" aria-labelledby="titulo-galeria">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Selección reciente</p>
+					<h2 id="titulo-galeria">Una colección de instantes</h2>
+				</div>
+				<p>Imágenes realizadas con paciencia, curiosidad y una cámara siempre lista.</p>
+			</div>
+			<div class="gallery-grid">
+				<article class="photo-card photo-card--wide">
+					<figure>
+						<img src="../asset/imagen/luna.jpg" alt="La luna destacando en un cielo nocturno" loading="lazy">
+						<figcaption><strong>Luna serena</strong><span>Cielo nocturno</span></figcaption>
+					</figure>
+				</article>
+				<article class="photo-card">
+					<figure>
+						<img src="../asset/imagen/mariposa.jpg" alt="Mariposa posada sobre una flor" loading="lazy">
+						<figcaption><strong>Pequeños vuelos</strong><span>Vida silvestre</span></figcaption>
+					</figure>
+				</article>
+				<article class="gallery-note">
+					<p class="eyebrow">Mi proceso</p>
+					<h3>Encontrar belleza donde otros pasan de largo.</h3>
+					<p>Cada fotografía nace de caminar sin prisa y prestar atención a los detalles: una textura, una sombra o un cambio de color.</p>
+					<a href="#contacto">Hablemos de tu idea <span aria-hidden="true">→</span></a>
+				</article>
+			</div>
+		</section>
+
+		<section id="sobre-mi" class="about-section" aria-labelledby="titulo-sobre-mi">
+			<div class="container about-layout">
+				<p class="eyebrow">Detrás de la cámara</p>
+				<div>
+					<h2 id="titulo-sobre-mi">Fotografiar es aprender a mirar.</h2>
+					<p>Este espacio reúne mi exploración visual de la naturaleza y los paisajes que aparecen en el camino. Busco composiciones honestas, colores con carácter y momentos que no necesitan explicación.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="contacto" class="contact-section container" aria-labelledby="titulo-contacto">
+			<div>
+				<p class="eyebrow">¿Tienes una historia?</p>
+				<h2 id="titulo-contacto">Hagámosla visible.</h2>
+			</div>
+			<a href="mailto:hola@luzdeobturador.com" role="button">Escríbeme</a>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-content">
+			<p><strong>Apasionados a la Fotografía</strong><br><small>Mirar. Esperar. Crear.</small></p>
+			<p><small>© 2026 Portafolio fotográfico</small></p>
+		</div>
+	</footer>
+</body>
+</html>
