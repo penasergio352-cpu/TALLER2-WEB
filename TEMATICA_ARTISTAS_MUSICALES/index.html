@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAGINA OFICIAL DE NIKI JAM</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<a class="logo" href="#inicio">NIKI JAM<span>.</span></a>
+		<nav aria-label="Navegación principal">
+			<a href="#artistas">Artistas</a>
+			<a href="#agenda">Agenda</a>
+			<a href="#contacto">Contacto</a>
+		</nav>
+	</header>
+
+	<main id="inicio">
+		<section class="intro" aria-labelledby="titulo">
+			<div>
+				<p class="etiqueta">puerto rico / colombia</p>
+				<h1>de puerto rico <em>para el mundo:</em>mi historia se relata a través de la música.</h1>
+				<p>en esta pagina encontrares una secion donde contare quien soy y como llegue hasta aqui.</p>
+			</div>
+			<div class="foto" role="img" aria-label="Artista cantando en un concierto"></div>
+		</section>
+
+		<section id="artistas" aria-labelledby="artistas-titulo">
+			<div class="titulo-seccion"><h2 id="artistas-titulo">niki_jam_PR</h2><span>top canciones</span></div>
+			<ul class="artistas">
+				<li><span class="numero">01</span><div><h3>donde estan las gatas(feat daddy yankee)</h3><p>regueton · puerto rico</p></div><strong>↗</strong></li>
+				 <li><span class="numero">02</span><div><h3>tu estas con el</h3><p>regueton · Medellín</p></div><strong>↗</strong></li>
+			</ul>
+		</section>
+
+		<section id="agenda" class="agenda" aria-labelledby="agenda-titulo">
+			<div class="titulo-seccion"><h2 id="agenda-titulo">Próximos conciertos</h2><span>Agenda</span></div>
+			<form class="filtros" action="#agenda">
+				<label for="genero">Filtrar por género</label>
+				<select id="genero" name="genero"><option>Todos</option><option>Indie pop</option><option>Electrónica</option><option>R&amp;B</option></select>
+				<label for="fecha">Desde</label>
+				<input id="fecha" name="fecha" type="date" value="2026-09-07">
+			</form>
+			<ol class="eventos">
+				<li><time datetime="2026-09-09">09 SEP</time><div><h3>Luna Rivas · Sesión íntima</h3><p>Casa Estudio 44, Bogotá</p></div><time datetime="2026-09-09T20:00">20:00 h</time></li>
+				<li><time datetime="2026-09-12">12 SEP</time><div><h3>Nómada Solar · Live set</h3><p>La Octava, Medellín</p></div><time datetime="2026-09-12T22:30">22:30 h</time></li>
+				<li><time datetime="2026-09-17">17 SEP</time><div><h3>Alma Brava · Presenta Raíz</h3><p>Teatro Municipal, Cali</p></div><time datetime="2026-09-17T19:00">19:00 h</time></li>
+			</ol>
+		</section>
+	</main>
+
+	<footer id="contacto"><strong>@NIKI_JAM_PR<span>.</span></strong><p>Descubre música nueva.</p><small>© 2026 </small></footer>
+</body>
+</html>
