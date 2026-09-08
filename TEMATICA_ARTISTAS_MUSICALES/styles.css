@@ -1,0 +1,368 @@
+:root {
+	--fondo: #000000;
+	--texto: #ff2b2b;
+	--rosa: #ff2b2b;
+	--verde: #ff2b2b;
+	--gris: #ff5555;
+	--borde: #5c1111;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	color: var(--texto);
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Encabezado */
+header {
+	align-items: center;
+	border-bottom: 1px solid var(--borde);
+	display: flex;
+	justify-content: space-between;
+	padding: 22px 8%;
+}
+
+.logo,
+footer strong {
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+}
+
+.logo span,
+footer span,
+em {
+	color: var(--rosa);
+	font-style: normal;
+}
+
+nav {
+	display: flex;
+	gap: 28px;
+}
+
+nav a {
+	color: var(--gris);
+	font-size: 0.9rem;
+}
+
+nav a:hover {
+	color: var(--rosa);
+}
+
+/* Contenido principal */
+main {
+	margin: auto;
+	max-width: 1100px;
+	padding: 0 6%;
+}
+
+.intro {
+	align-items: center;
+	display: grid;
+	gap: 8%;
+	grid-template-columns: 1fr 1fr;
+	min-height: 470px;
+}
+
+.etiqueta {
+	color: var(--rosa);
+	font-size: 0.72rem;
+	letter-spacing: 0.12em;
+}
+
+.intro h1 {
+	font-size: clamp(2.8rem, 6vw, 5.5rem);
+	letter-spacing: -0.07em;
+	line-height: 0.95;
+	margin: 24px 0;
+}
+
+.intro p:last-child {
+	color: var(--gris);
+	line-height: 1.6;
+	max-width: 360px;
+}
+
+.foto {
+	background:
+		linear-gradient(#0002, #0005),
+		url("asset/imagen/niki.jpg")
+		center / cover;
+	height: 390px;
+}
+
+/* Historia y bibliografía */
+.historia {
+	border-top: 1px solid var(--borde);
+}
+
+.historia .titulo-seccion {
+	align-items: end;
+}
+
+.biografia {
+	border-left: 4px solid var(--rosa);
+	font-size: 1.2rem;
+	line-height: 1.6;
+	margin-bottom: 35px;
+	max-width: 800px;
+	padding-left: 20px;
+}
+
+.etapas {
+	display: grid;
+	gap: 18px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.etapas article {
+	border-top: 1px solid var(--borde);
+	padding-top: 15px;
+}
+
+.etapas h3 {
+	font-size: 1rem;
+	line-height: 1.25;
+	margin: 12px 0;
+}
+
+.etapas p {
+	color: var(--gris);
+	font-size: 0.85rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.fuentes {
+	border-top: 1px solid var(--borde);
+	margin-top: 38px;
+	padding-top: 18px;
+}
+
+.fuentes h3 {
+	font-size: 1rem;
+	margin: 0 0 12px;
+}
+
+.fuentes ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 30px;
+	margin: 0;
+	padding-left: 20px;
+}
+
+.fuentes a {
+	color: var(--gris);
+	font-size: 0.8rem;
+	text-decoration: underline;
+}
+
+.fuentes a:hover {
+	color: var(--rosa);
+}
+
+section {
+	padding: 55px 0;
+}
+
+.titulo-seccion {
+	align-items: baseline;
+	border-bottom: 2px solid var(--texto);
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.titulo-seccion h2 {
+	font-size: 2rem;
+	letter-spacing: -0.05em;
+	margin-bottom: 12px;
+}
+
+.titulo-seccion span {
+	color: var(--gris);
+	font-size: 0.8rem;
+}
+
+/* Lista de artistas */
+.artistas,
+.eventos {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.artistas li {
+	align-items: center;
+	border-bottom: 1px solid var(--borde);
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 60px 1fr 30px;
+	padding: 18px 0;
+}
+
+.numero {
+	color: var(--rosa);
+	font-size: 0.8rem;
+}
+
+.artistas h3,
+.eventos h3 {
+	font-size: 1.15rem;
+	margin: 0 0 5px;
+}
+
+.artistas p,
+.eventos p {
+	color: var(--gris);
+	font-size: 0.85rem;
+	margin: 0;
+}
+
+.artistas strong {
+	font-size: 1.3rem;
+}
+
+/* Agenda */
+.agenda {
+	background: #000000;
+	color: var(--texto);
+	margin: 45px -6% 0;
+	padding: 55px 6%;
+}
+
+.agenda .titulo-seccion {
+	border-color: var(--borde);
+}
+
+.agenda .titulo-seccion span {
+	color: var(--gris);
+}
+
+.filtros {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+.filtros label {
+	color: var(--gris);
+	font-size: 0.8rem;
+}
+
+.filtros select,
+.filtros input {
+	background: transparent;
+	border: 1px solid var(--rosa);
+	color: var(--rosa);
+	padding: 9px;
+}
+
+.eventos li {
+	align-items: center;
+	border-bottom: 1px solid var(--borde);
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 90px 1fr 70px;
+	padding: 20px 0;
+}
+
+.eventos time {
+	color: var(--verde);
+	font-size: 0.8rem;
+}
+
+.eventos p {
+	color: var(--gris);
+}
+
+/* Pie de página */
+footer {
+	align-items: center;
+	border-top: 1px solid var(--borde);
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	padding: 25px 8%;
+}
+
+footer p,
+footer small {
+	color: var(--gris);
+	font-size: 0.8rem;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 650px) {
+	header {
+		padding: 18px 5%;
+	}
+
+	nav {
+		gap: 12px;
+	}
+
+	nav a {
+		font-size: 0.75rem;
+	}
+
+	main {
+		padding: 0 5%;
+	}
+
+	.intro {
+		display: block;
+		padding-top: 55px;
+	}
+
+	.foto {
+		height: 280px;
+		margin-top: 35px;
+	}
+
+	.agenda {
+		margin-left: -5%;
+		margin-right: -5%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.eventos li {
+		grid-template-columns: 60px 1fr;
+	}
+
+	.eventos li > time:last-child {
+		grid-column: 2;
+	}
+
+	.etapas {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.biografia {
+		font-size: 1rem;
+	}
+
+	footer {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+		margin-top: 30px;
+		padding: 25px 5%;
+	}
+}
+
